@@ -16,8 +16,10 @@ $(document).ready(function() {
 
     // Validate the input
     Display.validateInput(false, function(input) {
+
         // Print the input out again (this time with the '> ')
         Display.printLine(input);
         Display.empty();
+        
     });
 });
