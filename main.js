@@ -6,3 +6,18 @@
 
 // Currently I am still working on setting things up here,
 // PLEASE DO NOT MAKE A PULL REQUEST YET.
+$(document).ready(function() {
+
+    // Instantiate a new display object
+    Display = new display();
+
+    // Prints 'sweg' onto the screen
+    Display.printLine("sweg");
+
+    // Validate the input
+    Display.validateInput(false, function(input) {
+        // Print the input out again (this time with the '> ')
+        Display.printLine(input);
+        Display.empty();
+    });
+});
