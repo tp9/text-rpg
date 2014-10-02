@@ -2,7 +2,7 @@
 
 # Please read before contributing
 
-The main game code can be found under  the '_/asses/js/_' folder.
+The main game code can be found under  the '_/js/_' folder.
 Everything is brought together in '_main.js_' so there will never be much code in there.
 
 When writing your code please keep in mind that this is a _community project_ and that you should make your code

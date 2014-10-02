@@ -7,23 +7,21 @@ function dialogue(text, options, display) {
     // acess them later on.
     this.options = options;
     this.text = text;
-
-
+    this.display = display;
+    this.input = "";
     // More variables go here
 
     // Actually displays the dialogue on screen
     this.activate = function() {
-        display.print(this.text + "\n");
-
-        for (var i = 0; i < this.options.size(); ++i) {
-            display.print((i + 1) + ": " + this.options[i]);
+        display.print(this.text + "<br>");
+        for (var i = 0; i < this.options.length; ++i) {
+            this.display.print((i + 1) + ": " + this.options[i] + "<br>");
         }
-        var userInput = false;
-        while (true) {
-            userInput = display.validateInput();
-            if (userInput) {
-                return userInput;
+        this.display.validateInput(true, function(input) {
+            this.input = input.toString();
+            if (this.input == 1) {
+                display.print("Swegerino");
             }
-        }
+        });
     }
 }

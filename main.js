@@ -11,15 +11,7 @@ $(document).ready(function() {
     // Instantiate a new display object
     Display = new display();
 
-    // Prints 'sweg' onto the screen
-    Display.printLine("sweg");
-
-    // Validate the input
-    Display.validateInput(false, function(input) {
-
-        // Print the input out again (this time with the '> ')
-        Display.printLine(input);
-        Display.empty();
-        
-    });
+    // Instantiate a new dialogue object
+    defaultDialogue = new dialogue("Choose an option", ["Sweg", "No Sweg"], Display);
+    defaultDialogue.activate();
 });
