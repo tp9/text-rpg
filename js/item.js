@@ -1,1 +1,1 @@
-//file for inventories
+//file for items
