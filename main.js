@@ -19,10 +19,10 @@ $(document).ready(function() {
         // Manipulation of the input goes here:
         switch (parseInt(input)) {
             case 1:
-                console.log("You chose 1");
+                Display.print("You chose 1");
                 break;
             case 2:
-                console.log("You chose 2");
+                Display.print("You chose 2");
                 break;
             default:
                 // IF the input was none of the above, re-activate the dialogue.
