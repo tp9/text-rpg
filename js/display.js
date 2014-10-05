@@ -3,7 +3,7 @@
 // things, e.g the areas and what monsters it will have
 
 function display() {
-
+    var ref = this;
     // Prints a string to the screen with format:
     // > string
     this.print = function (string) {
@@ -29,7 +29,7 @@ function display() {
         // Wait for the user to click submit or press
         // enter, then if the input is a valid number
         // return true. If it is not valid return false
-        $(document).keydown(function(e) {
+        $(document).on("keydown", function(e) {
 
             // If the enter key is pressed, if the box is focused and if
             if (e.which == 13 && $("#inputBox").is(":focus")) {
@@ -44,9 +44,9 @@ function display() {
 
                     // Get input from screen
                     var newInput = $("#inputBox").val();
-
+                    
                     // Remove this handler
-                    this.removeKeyhandler();
+                    ref.removeKeyhandler();
 
                     // Call the code passed to the function
                     callback(newInput);
@@ -62,7 +62,7 @@ function display() {
                     var newInput = $("#inputBox").val();
 
                     // Remove this handler
-                    this.removeKeyhandler();
+                    ref.removeKeyhandler();
 
                     // Call the code passed to the function
                     callback(newInput);
@@ -90,6 +90,6 @@ function display() {
     }
 
     this.removeKeyhandler = function() {
-        $(document).off("keydown", document);
+        $(document).off("keydown");
     }
 }
