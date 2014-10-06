@@ -23,7 +23,7 @@ function dialogue(text, options, number, display) {
         // 2. Option 2
         // etc
         for (var i = 0; i < this.options.length; ++i) {
-            this.display.print((i + 1) + ": " + this.options[i] + "<br>");
+            this.display.print(this.options[i] + "<br>");
         }
 
         // Validate the input, change the input to a string and send it

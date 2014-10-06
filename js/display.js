@@ -8,7 +8,7 @@ function display() {
     // > string
     this.print = function (string) {
         // Print the variable 'string' to the screen
-        var newOutput = "&gt; " + string;
+        var newOutput = string;
         $("#output").append(newOutput);
     }
 
@@ -16,7 +16,7 @@ function display() {
     // Prints a string to the screen with format:
     // > string <br>
     this.printLine = function (string) {
-        var newOutput = "&gt; " + string + "<br>";
+        var newOutput = string + "<br>";
         $("#output").append(newOutput);
     }
 

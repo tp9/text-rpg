@@ -10,8 +10,7 @@ $(document).ready(function() {
     Display = new display();
 
     // Instantiate a new dialogue object
-    defaultDialogue = new dialogue("Choose an option", ["Sweg", "No Sweg"], true, Display);
-
+    defaultDialogue = new dialogue("What would you like to do?", ["W: Go west", "E: Go east"], true, Display);
 
     // Callback to use for the dialogue.
     var callback = function(input) {
@@ -32,11 +31,8 @@ $(document).ready(function() {
                 break;
         }
     }
-
+    
     // Activate the dialogue for the first time
     defaultDialogue.activate(callback);
 
-
-
-// Don't delete this!
 });
